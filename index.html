@@ -1,0 +1,31 @@
+<doctype html>
+<html>
+<head>
+	<title>KayLed</title>
+	<h1> ArduinoYun </h1>
+    <h6>Controller by kAY<h6><br>
+</head>
+<body onload="setInterval(refresh, 1000);">
+        <button id="ledon">LED ON</button><br>
+        <br><br><button id="ledoff">LED OFF</button><br>
+		<br><br><br><button id="kay">Date + Time</button><br><br>
+        <button id="clear">Clear / Reset</button><br><br>
+        Status :<div id="results">Arduino</div>
+        <script type="text/javascript" src="js\zepto.min.js"></script>
+		<script type="text/javascript" src="js\kay.js"></script><br>
+<script>
+$('#kay').click(function(){
+	KAY.Do($('#results'));
+});
+$('#ledon').click(function(){
+	KAY.LEDON($('#results'));
+});
+$('#ledoff').click(function(){
+	KAY.LEDOFF($('#results'));
+});
+$('#clear').click(function(){
+$('#results').html('');
+});
+</script>
+</body>
+</html>
